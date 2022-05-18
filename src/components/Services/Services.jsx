@@ -5,6 +5,7 @@ import clock from '../../img/clock.svg';
 import diaphragm from "../../img/diaphragm.svg";
 import money from "../../img/money.svg";
 import teamwork from "../../img/teamwork.svg";
+import home2 from "../../img/home2.png";
 
 const Services = () => {
   return (
@@ -43,6 +44,9 @@ const Services = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         </div>
+      </div>
+      <div className={style.image}>
+          <img src={home2} alt="" />
       </div>
     </div>
   );
