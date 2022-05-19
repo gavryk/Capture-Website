@@ -1,7 +1,7 @@
 .servicesSection {
   min-height: 90vh;
   display: grid;
-  grid-template-columns: 500px 1fr;
+  grid-template-columns: .6fr 1fr;
   align-items: center;
   grid-gap: 80px;
   padding: 5rem 10rem;
@@ -15,9 +15,9 @@
     }
     .cards {
       display: grid;
-      grid-template-columns: repeat(2, 25rem);
+      grid-template-columns: repeat(2, auto);
       justify-content: space-between;
-      grid-gap: 15px;
+      grid-gap: 40px;
       .icon {
         display: grid;
         grid-template-columns: 50px auto;
