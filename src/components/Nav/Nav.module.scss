@@ -1,0 +1,57 @@
+@import "./../../index.scss";
+
+.navigate {
+  min-height: 5vh;
+  background-color: #282828;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 1580px;
+    max-width: 96%;
+    padding: 2rem 0;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .navMenu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      list-style: none;
+      li {
+        margin-left: 10rem;
+        position: relative;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -7px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $color;
+          transition: all 0.3s ease-in-out;
+        }
+        a {
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          a {
+            color: $color;
+          }
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

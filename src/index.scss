@@ -1,11 +1,11 @@
 $color: #23d997;
-$font: 'Inter', sans-serif;
-$logo: 'Lobster', cursive;
+$font: "Inter", sans-serif;
+$logo: "Lobster", cursive;
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,7 +20,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -38,7 +38,7 @@ button {
   border: 3px solid $color;
   color: #fff;
   background: transparent;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   font-family: $font;
   &:hover {
     background-color: $color;
@@ -71,6 +71,11 @@ p {
   color: #ccc;
   font-size: 1.4rem;
   line-height: 150%;
+}
+
+#logo {
+  font-family: $logo;
+  font-size: 1.5rem;
 }
 
 ::-webkit-scrollbar {
