@@ -1,5 +1,5 @@
 import React from 'react'
-import { About, Services } from '../../components';
+import { About, Faq, Services } from '../../components';
 import style from './AboutUs.module.scss';
 
 const AboutUs = () => {
@@ -7,6 +7,7 @@ const AboutUs = () => {
     <div className={style.aboutUsPage}>
       <About />
       <Services />
+      <Faq/>
     </div>
   );
 }
