@@ -6,7 +6,7 @@ const Faq = () => {
     <div className={style.faqSection}>
       <div className={style.title}>
         <h2>
-          Any Questions <span>FAQ</span>?
+          Any Questions <span>FAQ</span>
         </h2>
       </div>
       <div className={style.question}>
