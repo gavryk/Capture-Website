@@ -12,7 +12,7 @@ const About = () => {
             <h2>We Work to make</h2>
           </div>
           <div className={style.hide}>
-            <h2>your <span>dreams</span>come</h2>
+            <h2>your <span>dreams</span> come</h2>
           </div>
           <div className={style.hide}>
             <h2>true.</h2>
