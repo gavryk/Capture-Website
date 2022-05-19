@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <div className={style.navigate}>
         <nav>
-            <a id="logo" className={style.logo} href="#">Gvozd</a>
+            <Link id="logo" className={style.logo} to="/">Gvozd</Link>
             <ul className={style.navMenu}>
                 <li><Link to='/'>About Me</Link></li>
                 <li><Link to='works'>My Works</Link></li>
