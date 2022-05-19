@@ -10,6 +10,9 @@ import home2 from "../../img/home2.png";
 const Services = () => {
   return (
     <div className={style.servicesSection}>
+      <div className={style.image}>
+        <img src={home2} alt="service" />
+      </div>
       <div className={style.description}>
         <h2>
           Hight <span>quality</span> services
@@ -18,35 +21,32 @@ const Services = () => {
           <div className={style.card}>
             <div className={style.icon}>
               <img src={clock} alt="Clock" />
-              <h3>Efficient</h3>
+              <span>Efficient</span>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <div className={style.card}>
             <div className={style.icon}>
               <img src={teamwork} alt="Clock" />
-              <h3>Teamwork</h3>
+              <span>Teamwork</span>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <div className={style.card}>
             <div className={style.icon}>
               <img src={diaphragm} alt="Clock" />
-              <h3>Diaphragm</h3>
+              <span>Diaphragm</span>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <div className={style.card}>
             <div className={style.icon}>
               <img src={money} alt="Clock" />
-              <h3>Affordable</h3>
+              <span>Affordable</span>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         </div>
-      </div>
-      <div className={style.image}>
-          <img src={home2} alt="service" />
       </div>
     </div>
   );

@@ -1,25 +1,25 @@
 .aboutSection {
-    padding: 5rem 10rem;
-    display: grid;
-    grid-template-columns: 1fr 600px;
-    align-items: center;
-    grid-gap: 50px;
-    min-height: 90vh;
-    .description {
-        > * {
-            color: #fff;
-        }
-        padding-right: 5rem;
-        .hide {
-            overflow: hidden;
-        }
+  padding: 5rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  align-items: center;
+  grid-gap: 50px;
+  min-height: 90vh;
+  .description {
+    > * {
+      color: #fff;
     }
-    .image {
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: 80vh;
-            object-fit: cover;
-        }
+    padding-right: 5rem;
+    .hide {
+      overflow: hidden;
     }
+  }
+  .image {
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+  }
 }

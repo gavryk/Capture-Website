@@ -1,4 +1,6 @@
 $color: #23d997;
+$font: 'Inter', sans-serif;
+$logo: 'Lobster', cursive;
 
 body {
   margin: 0;
@@ -9,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #1b1b1b;
+  font-family: $font;
 }
 
 .App {
@@ -36,6 +39,7 @@ button {
   color: #fff;
   background: transparent;
   transition: all .5s ease-in-out;
+  font-family: $font;
   &:hover {
     background-color: $color;
     color: #fff;
