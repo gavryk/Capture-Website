@@ -18,7 +18,7 @@ const Works = () => {
     >
       <div className={style.worksWrapper}>
         <div className={style.work}>
-          <motion.h2 variants={fade}>The Athlete</motion.h2>
+          <motion.h2 variants={fade} >The Athlete</motion.h2>
           <motion.div variants={lineAnim} className={style.line}></motion.div>
           <Link to="#">
             <motion.img variants={photoAnim} src={img1} alt="wokr1" />

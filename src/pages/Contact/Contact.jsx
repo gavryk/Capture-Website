@@ -11,6 +11,7 @@ const Contact = () => {
       animate="show"
       exit="exit"
       className={style.contactPage}
+      style={{backgroundColor: '#fff'}}
     >
       <h1>Contact</h1>
     </motion.div>
