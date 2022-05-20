@@ -5,6 +5,12 @@
   align-items: center;
   grid-gap: 50px;
   min-height: 90vh;
+  position: relative;
+  .description,
+  .image {
+    position: relative;
+    z-index: 2;
+  }
   .description {
     > * {
       color: #fff;

@@ -2,6 +2,8 @@ import React from 'react';
 import style from './About.module.scss';
 import homeImg1 from '../../img/home1.png';
 import { motion } from 'framer-motion';
+import Wave from '../Wave/Wave';
+
 
 const About = () => {
 
@@ -11,11 +13,12 @@ const About = () => {
   }
   const container = {
     hidden: {x: 100},
-    show: {x: 0, transition: {duration: 0.75}}
+    show: {x: 0, transition: {duration: 0.75, staggerChildren: 0.5, when: 'beforeChildren'}}
   }
 
   return (
     <div className={style.aboutSection}>
+      <Wave/>
       <div className={style.description}>
 
         <motion.div variants={container} initial="hidden" animate="show" className={style.title}>
