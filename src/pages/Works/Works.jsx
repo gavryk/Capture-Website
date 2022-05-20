@@ -4,16 +4,24 @@ import { Link } from "react-router-dom";
 import img1 from "../../img/athlete-small.png";
 import img2 from "../../img/theracer-small.png";
 import img3 from "../../img/goodtimes-small.png";
+import { motion } from "framer-motion";
+import { pageAnimation, fade, photoAnim, lineAnim } from "../../animations";
 
 const Works = () => {
   return (
-    <div className={style.worksPage}>
+    <motion.div
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      className={style.worksPage}
+    >
       <div className={style.worksWrapper}>
         <div className={style.work}>
-          <h2>The Athlete</h2>
-          <div className={style.line}></div>
+          <motion.h2 variants={fade}>The Athlete</motion.h2>
+          <motion.div variants={lineAnim} className={style.line}></motion.div>
           <Link to="#">
-            <img src={img1} alt="wokr1" />
+            <motion.img variants={photoAnim} src={img1} alt="wokr1" />
           </Link>
         </div>
         <div className={style.work}>
@@ -31,7 +39,7 @@ const Works = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

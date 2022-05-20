@@ -1,11 +1,19 @@
 import React from 'react';
 import style from './Contact.module.scss';
+import { motion } from "framer-motion";
+import { pageAnimation } from "../../animations";
 
 const Contact = () => {
   return (
-    <div className={style.contactPage}>
+    <motion.div
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      className={style.contactPage}
+    >
       <h1>Contact</h1>
-    </div>
+    </motion.div>
   );
 }
 

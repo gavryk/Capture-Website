@@ -3,18 +3,10 @@ import style from './About.module.scss';
 import homeImg1 from '../../img/home1.png';
 import { motion } from 'framer-motion';
 import Wave from '../Wave/Wave';
+import { titleAnim, container } from '../../animations';
 
 
 const About = () => {
-
-  const titleAnim = {
-    hidden: {opacity: 0},
-    show: {opacity: 1, transition: {duration: 2}}
-  }
-  const container = {
-    hidden: {x: 100},
-    show: {x: 0, transition: {duration: 0.75, staggerChildren: 0.5, when: 'beforeChildren'}}
-  }
 
   return (
     <div className={style.aboutSection}>
