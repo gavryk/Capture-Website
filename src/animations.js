@@ -82,3 +82,16 @@ export const rainbowContainer = {
     transition: {staggerChildren: 0.1, ease: 'easeOut'}
   }
 }
+
+export const scrollReveal = {
+  hidden: { x: -300, opacity: 0, transition: { duration: 0.5 } },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      when: "beforeChildren",
+      staggerChildren: 0.25,
+    },
+  },
+};

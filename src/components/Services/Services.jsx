@@ -1,15 +1,21 @@
 import React from 'react';
 import style from './Services.module.scss';
+import { motion } from "framer-motion";
+import { fade } from "../../animations";
 //icons
 import clock from '../../img/clock.svg';
 import diaphragm from "../../img/diaphragm.svg";
 import money from "../../img/money.svg";
 import teamwork from "../../img/teamwork.svg";
 import home2 from "../../img/home2.png";
+//custom hooks
+import {useScroll} from '../../hooks/useScroll';
 
 const Services = () => {
+  const [element, controls] = useScroll();
+  
   return (
-    <div className={style.servicesSection}>
+    <motion.div variants={fade} animate={controls} className={style.servicesSection} ref={element}>
       <div className={style.image}>
         <img src={home2} alt="service" />
       </div>
@@ -48,7 +54,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

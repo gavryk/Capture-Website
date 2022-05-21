@@ -5,6 +5,7 @@ import img1 from "../../img/athlete-small.png";
 import img2 from "../../img/theracer-small.png";
 import img3 from "../../img/goodtimes-small.png";
 import { motion } from "framer-motion";
+import { useScroll } from "../../hooks/useScroll"
 import {
   pageAnimation,
   fade,
@@ -15,6 +16,9 @@ import {
 } from "../../animations";
 
 const Works = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
+  
   return (
     <motion.div
       variants={pageAnimation}
@@ -30,27 +34,27 @@ const Works = () => {
         <motion.div variants={rainbow} className={style.frame4}></motion.div>
       </motion.div>
       <div className={style.worksWrapper}>
-        <div className={style.work}>
+        <motion.div className={style.work}>
           <motion.h2 variants={fade}>The Athlete</motion.h2>
           <motion.div variants={lineAnim} className={style.line}></motion.div>
           <Link to="#">
             <motion.img variants={photoAnim} src={img1} alt="wokr1" />
           </Link>
-        </div>
-        <div className={style.work}>
-          <h2>The Racer</h2>
-          <div className={style.line}></div>
+        </motion.div>
+        <motion.div ref={element} variants={fade} animate={controls} initial="hidden" className={style.work}>
+          <motion.h2 variants={fade}>The Racer</motion.h2>
+          <motion.div variants={lineAnim} className={style.line}></motion.div>
           <Link to="#">
-            <img src={img2} alt="wokr2" />
+            <motion.img variants={photoAnim} src={img2} alt="wokr2" />
           </Link>
-        </div>
-        <div className={style.work}>
-          <h2>Good Times</h2>
-          <div className={style.line}></div>
+        </motion.div>
+        <motion.div ref={element2} variants={fade} animate={controls2} initial="hidden" className={style.work}>
+          <motion.h2 variants={fade}>Good Times</motion.h2>
+          <motion.div variants={lineAnim} className={style.line}></motion.div>
           <Link to="#">
-            <img src={img3} alt="wokr3" />
+            <motion.img variants={photoAnim} src={img3} alt="wokr3" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

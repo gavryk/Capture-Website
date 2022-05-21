@@ -2,6 +2,9 @@ import { AnimateSharedLayout } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Toggle from "../Toggle/Toggle";
 import style from "./Faq.module.scss";
+import { useScroll } from "../../hooks/useScroll";
+import { motion } from "framer-motion";
+import { fade } from "../../animations";
 
 const faqsList = [
   {
@@ -32,13 +35,20 @@ const faqsList = [
 
 const Faq = () => {
   const [faqs, setFaqs] = useState([]);
+  const [element, controls] = useScroll();
 
   useEffect(() => {
     setFaqs(faqsList);
-  }, [])
+  }, []);
 
   return (
-    <div className={style.faqSection}>
+    <motion.div
+      variants={fade}
+      animate={controls}
+      initial="hidden"
+      className={style.faqSection}
+      ref={element}
+    >
       <div className={style.title}>
         <h2>
           Any Questions <span>FAQ</span>
@@ -46,10 +56,15 @@ const Faq = () => {
       </div>
       <AnimateSharedLayout>
         {faqs.map((item, index) => {
-          return <Toggle key={`${item.question}_${index}`} {...item} />;
+          return (
+            <Toggle
+              key={`${item.question}_${index}`}
+              {...item}
+            />
+          );
         })}
       </AnimateSharedLayout>
-    </div>
+    </motion.div>
   );
 };
 
