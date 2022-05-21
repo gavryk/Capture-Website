@@ -4,6 +4,7 @@ import homeImg1 from '../../img/myPhoto.jpg';
 import { motion } from 'framer-motion';
 import Wave from '../Wave/Wave';
 import { titleAnim, container, photoAnim, fade } from '../../animations';
+import { Link } from 'react-router-dom';
 
 
 const About = () => {
@@ -19,23 +20,24 @@ const About = () => {
           className={style.title}
         >
           <div className={style.hide}>
-            <motion.h2 variants={titleAnim}>We Work to make</motion.h2>
+            <motion.h2 variants={titleAnim}>Hi, i'm Oleg,</motion.h2>
           </div>
           <div className={style.hide}>
             <motion.h2 variants={titleAnim}>
-              your <span>dreams</span> come
+              <span>Front-end / Web,</span>
             </motion.h2>
           </div>
           <div className={style.hide}>
-            <motion.h2 variants={titleAnim}>true.</motion.h2>
+            <motion.h2 variants={titleAnim}>Developer.</motion.h2>
           </div>
         </motion.div>
         <motion.p variants={fade} initial="hidden" animate="show">
-          Contact us for any photography or videography ideas thet you have. We
-          have proffesionals with amazing skills
+          I have been developing CMS Wordpress sites for 3 years, I have many
+          commercial projects, but on this site the main emphasis is on React
+          JS, as I am currently developing in this direction.
         </motion.p>
         <motion.button variants={fade} initial="hidden" animate="show">
-          Contact Us
+          <Link to="contact">Contact Me</Link>
         </motion.button>
       </div>
 

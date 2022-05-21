@@ -40,9 +40,14 @@ button {
   background: transparent;
   transition: all 0.5s ease-in-out;
   font-family: $font;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
   &:hover {
     background-color: $color;
     color: #fff;
+    
   }
 }
 
