@@ -31,6 +31,7 @@ export const photoAnim = {
     transition: {
       ease: "easeOut",
       duration: 0.75,
+      delay: 0.7
     },
   },
 };
@@ -64,3 +65,20 @@ export const pageAnimation = {
     },
   },
 };
+
+export const rainbow = {
+  hidden: {x: '-130%', skew: '45deg'},
+  show: {
+    x: '100%',
+    skew: '0deg',
+    transition: {ease: 'easeOut', duration: 1}
+  }
+}
+
+export const rainbowContainer = {
+  hidden: {opacity: 1},
+  show: {
+    opacity: 1,
+    transition: {staggerChildren: 0.1, ease: 'easeOut'}
+  }
+}

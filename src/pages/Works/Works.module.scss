@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .worksPage {
   min-height: 100vh;
   overflow: hidden;
@@ -16,7 +18,7 @@
       }
       .line {
         height: 0.5rem;
-        background-color: #ccc;
+        background-color: $color;
         margin-bottom: 3rem;
       }
       a {
@@ -39,4 +41,28 @@
       }
     }
   }
+}
+
+.frame1,
+.frame2,
+.frame3,
+.frame4 {
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.frame1 {
+  background-color: #fffebf;
+}
+.frame2 {
+  background-color: #5791fc;
+}
+.frame3 {
+  background-color: #ff8efb;
+}
+.frame4 {
+  background-color: #8effa0;
 }

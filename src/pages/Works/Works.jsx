@@ -5,7 +5,14 @@ import img1 from "../../img/athlete-small.png";
 import img2 from "../../img/theracer-small.png";
 import img3 from "../../img/goodtimes-small.png";
 import { motion } from "framer-motion";
-import { pageAnimation, fade, photoAnim, lineAnim } from "../../animations";
+import {
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+  rainbow,
+  rainbowContainer,
+} from "../../animations";
 
 const Works = () => {
   return (
@@ -16,9 +23,15 @@ const Works = () => {
       exit="exit"
       className={style.worksPage}
     >
+      <motion.div variants={rainbowContainer}>
+        <motion.div variants={rainbow} className={style.frame1}></motion.div>
+        <motion.div variants={rainbow} className={style.frame2}></motion.div>
+        <motion.div variants={rainbow} className={style.frame3}></motion.div>
+        <motion.div variants={rainbow} className={style.frame4}></motion.div>
+      </motion.div>
       <div className={style.worksWrapper}>
         <div className={style.work}>
-          <motion.h2 variants={fade} >The Athlete</motion.h2>
+          <motion.h2 variants={fade}>The Athlete</motion.h2>
           <motion.div variants={lineAnim} className={style.line}></motion.div>
           <Link to="#">
             <motion.img variants={photoAnim} src={img1} alt="wokr1" />
