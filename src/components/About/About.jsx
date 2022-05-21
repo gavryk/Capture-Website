@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './About.module.scss';
-import homeImg1 from '../../img/home1.png';
+import homeImg1 from '../../img/myPhoto.jpg';
 import { motion } from 'framer-motion';
 import Wave from '../Wave/Wave';
 import { titleAnim, container, photoAnim, fade } from '../../animations';
