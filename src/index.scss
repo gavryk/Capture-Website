@@ -30,7 +30,7 @@ code {
   box-sizing: border-box;
 }
 
-button {
+button, .btn {
   font-weight: 700;
   font-size: 1.1rem;
   cursor: pointer;
@@ -49,6 +49,10 @@ button {
     color: #fff;
     
   }
+}
+.btn {
+  color: $color;
+  padding: 1rem 4rem;
 }
 
 h2 {

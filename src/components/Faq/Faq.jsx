@@ -8,26 +8,26 @@ import { fade } from "../../animations";
 
 const faqsList = [
   {
-    question: "How Do I Start?",
-    answer:
+    title: "How Do I Start?",
+    content:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Fugiat illo blanditiis obcaecati perferendis repudiandae exercitationem dolor nobis, fuga, enim hic suscipit velit laboriosam! Magnam accusamus incidunt beatae molestiae soluta optio.",
     active: false,
   },
   {
-    question: "Daily Schedule?",
-    answer:
+    title: "Daily Schedule?",
+    content:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Fugiat illo blanditiis obcaecati perferendis repudiandae exercitationem dolor nobis, fuga, enim hic suscipit velit laboriosam! Magnam accusamus incidunt beatae molestiae soluta optio.",
     active: false,
   },
   {
-    question: "Diferrent Payment Methods?",
-    answer:
+    title: "Diferrent Payment Methods?",
+    content:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Fugiat illo blanditiis obcaecati perferendis repudiandae exercitationem dolor nobis, fuga, enim hic suscipit velit laboriosam! Magnam accusamus incidunt beatae molestiae soluta optio.",
     active: false,
   },
   {
-    question: "What Products Do You Offer?",
-    answer:
+    title: "What Products Do You Offer?",
+    content:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Fugiat illo blanditiis obcaecati perferendis repudiandae exercitationem dolor nobis, fuga, enim hic suscipit velit laboriosam! Magnam accusamus incidunt beatae molestiae soluta optio.",
     active: false,
   },
@@ -60,7 +60,9 @@ const Faq = () => {
             <Toggle
               key={`${item.question}_${index}`}
               {...item}
-            />
+            >
+              <p>{item.content}</p>
+            </Toggle>
           );
         })}
       </AnimateSharedLayout>
