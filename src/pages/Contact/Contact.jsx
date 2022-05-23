@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 import style from './Contact.module.scss';
 import { motion } from "framer-motion";
-import { pageAnimation } from "../../animations";
+import { pageAnimation, titleAnim2 } from "../../animations";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
+import ScrollTop from '../../components/ScrollTop';
 
 const Contact = () => {
    const form = useRef();
@@ -32,25 +33,45 @@ const Contact = () => {
     >
       <div className={style.contactBlocks}>
         <div className={style.info}>
-          <h2>Social Links</h2>
-          <div className={style.socLinks}>
-            <a href="https://www.instagram.com/gvozd_oleg/" target="_blank" rel="noreferrer" className={style.sIcon}>
+          <motion.h2 variants={titleAnim2}>Social Links</motion.h2>
+          <motion.div className={style.socLinks} variants={titleAnim2}>
+            <a
+              href="https://www.instagram.com/gvozd_oleg/"
+              target="_blank"
+              rel="noreferrer"
+              className={style.sIcon}
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100003291303734" target="_blank" rel="noreferrer" className={style.sIcon}>
+            <a
+              href="https://www.facebook.com/profile.php?id=100003291303734"
+              target="_blank"
+              rel="noreferrer"
+              className={style.sIcon}
+            >
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href="https://www.linkedin.com/in/oleg-gvozd-20a16116a/" target="_blank" rel="noreferrer" className={style.sIcon}>
+            <a
+              href="https://www.linkedin.com/in/oleg-gvozd-20a16116a/"
+              target="_blank"
+              rel="noreferrer"
+              className={style.sIcon}
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
-            <a href="https://github.com/gavryk" target="_blank" rel="noreferrer" className={style.sIcon}>
+            <a
+              href="https://github.com/gavryk"
+              target="_blank"
+              rel="noreferrer"
+              className={style.sIcon}
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
-          </div>
+          </motion.div>
         </div>
         <div className={style.info}>
-          <h2>Contact Form</h2>
-          <form ref={form} onSubmit={sendEmail}>
+          <motion.h2 variants={titleAnim2}>Get In Touch.</motion.h2>
+          <motion.form variants={titleAnim2} ref={form} onSubmit={sendEmail}>
             <div className="form-floating mb-3">
               <input
                 type="text"
@@ -92,9 +113,10 @@ const Contact = () => {
               <label htmlFor="floatingTextarea4">Message</label>
             </div>
             <input type="submit" value="Send" className="btn" />
-          </form>
+          </motion.form>
         </div>
       </div>
+      <ScrollTop />
     </motion.div>
   );
 }

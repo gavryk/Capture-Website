@@ -3,6 +3,15 @@ export const titleAnim = {
   show: { opacity: 1, transition: { duration: 2 } },
 };
 
+export const titleAnim2 = {
+  hidden: { y: 200, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.75, ease: "easeOut" },
+  },
+};
+
 export const container = {
   hidden: { x: 100 },
   show: {
