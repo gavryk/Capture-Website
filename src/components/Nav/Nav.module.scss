@@ -2,6 +2,8 @@
 
 .navigate {
   min-height: 5vh;
+  position: relative;
+  z-index: 100;
   background-color: #282828;
   nav {
     display: flex;

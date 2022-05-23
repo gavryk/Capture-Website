@@ -1,7 +1,37 @@
+@import '../../index.scss';
+
 .contactPage {
   .contactBlocks {
     padding: 3rem 10rem;
     min-height: 90vh;
     position: relative;
+    .info {
+      margin-bottom: 40px;
+      > h2 {
+        margin-bottom: 20px;
+      }
+      .socLinks {
+        display: grid;
+        grid-template-columns: repeat(4, 30px);
+        align-items: center;
+        grid-gap: 15px;
+        .sIcon {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          flex-direction: row;
+          color: $color;
+          border-radius: 50%;
+          transition: all .2s ease-in-out;
+          &:hover {
+            background-color: $color;
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }

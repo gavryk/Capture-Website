@@ -3,6 +3,8 @@ import style from './Contact.module.scss';
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animations";
 import emailjs from "@emailjs/browser";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faFacebookF, faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
    const form = useRef();
@@ -26,32 +28,70 @@ const Contact = () => {
       animate="show"
       exit="exit"
       className={style.contactPage}
-      style={{backgroundColor: '#fff'}}
+      style={{ backgroundColor: "#fff" }}
     >
       <div className={style.contactBlocks}>
         <div className={style.info}>
           <h2>Social Links</h2>
+          <div className={style.socLinks}>
+            <a href="https://www.instagram.com/gvozd_oleg/" target="_blank" rel="noreferrer" className={style.sIcon}>
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100003291303734" target="_blank" rel="noreferrer" className={style.sIcon}>
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a href="https://www.linkedin.com/in/oleg-gvozd-20a16116a/" target="_blank" rel="noreferrer" className={style.sIcon}>
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+            <a href="https://github.com/gavryk" target="_blank" rel="noreferrer" className={style.sIcon}>
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </div>
         </div>
         <div className={style.info}>
           <h2>Contact Form</h2>
           <form ref={form} onSubmit={sendEmail}>
             <div className="form-floating mb-3">
-              <input type="text" className="form-control" id="floatingInput" placeholder="Name"/>
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                id="floatingInput"
+                placeholder="Name"
+              />
               <label htmlFor="floatingInput">Name</label>
             </div>
             <div className="form-floating mb-3">
-              <input type="text" className="form-control" id="floatingInput2" placeholder="Company"/>
+              <input
+                type="text"
+                className="form-control"
+                name="company"
+                id="floatingInput2"
+                placeholder="Company"
+              />
               <label htmlFor="floatingInput2">Company</label>
             </div>
             <div className="form-floating mb-3">
-              <input type="email" className="form-control" id="floatingInput3" placeholder="Email"/>
+              <input
+                type="email"
+                className="form-control"
+                name="email"
+                id="floatingInput3"
+                placeholder="Email"
+              />
               <label htmlFor="floatingInput3">Email address</label>
             </div>
             <div className="form-floating mb-4">
-              <textarea className="form-control" placeholder="Leave a Message here" id="floatingTextarea4" style={{height: `100px`}}></textarea>
+              <textarea
+                className="form-control"
+                name="message"
+                placeholder="Leave a Message here"
+                id="floatingTextarea4"
+                style={{ height: `100px` }}
+              ></textarea>
               <label htmlFor="floatingTextarea4">Message</label>
             </div>
-            <input type="submit" value="Send" className='btn' />
+            <input type="submit" value="Send" className="btn" />
           </form>
         </div>
       </div>
