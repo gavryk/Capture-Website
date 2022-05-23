@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useMatch, useResolvedPath, } from 'react-router-dom';
-import { LinkProps } from "react-router-dom";
 import style from './Nav.module.scss';
 
 function CustomLink({ children, to, ...props }) {
