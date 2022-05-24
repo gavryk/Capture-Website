@@ -7,6 +7,9 @@
   width: 100%;
   z-index: 100;
   background-color: #282828;
+  @media (max-width: 576px) {
+      min-height: auto;
+  }
   nav {
     display: flex;
     align-items: center;
@@ -17,6 +20,12 @@
     width: 1580px;
     max-width: 96%;
     padding: 2rem 0;
+    @media (max-width: 1100px) {
+      width: 100%;
+    }
+    @media (max-width: 576px) {
+      padding: 1rem 0;
+    }
     a {
       color: #fff;
       text-decoration: none;
@@ -28,9 +37,26 @@
       flex-wrap: wrap;
       flex-direction: row;
       list-style: none;
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      @media (max-width: 576px) {
+          flex-direction: column;
+          padding-left: 0;
+      }
       li {
         margin-left: 10rem;
         position: relative;
+        @media (max-width: 1100px) {
+          margin-left: 5rem;
+        }
+        @media (max-width: 768px) {
+          margin: 0 2rem;
+        }
+        @media (max-width: 576px) {
+            margin: 5px 0;
+        }
         &:first-child {
           margin-left: 0;
         }
