@@ -22,7 +22,7 @@ const Nav = ({ links, activeMobileMenu, toggleMenu }) => {
         <Link id="logo" className={style.logo} to="/">
           Gvozd
         </Link>
-        <div className={style.burgerIcon} onClick={toggleMenu}>
+        <div className={`${style.burgerIcon} ${activeMobileMenu ? style.active : ""}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
