@@ -6,9 +6,19 @@
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #282828;
+  // background-color: #282828;
   @media (max-width: 576px) {
       min-height: auto;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #282828;
+    z-index: 2;
   }
   nav {
     display: flex;
@@ -26,6 +36,31 @@
     @media (max-width: 576px) {
       padding: 1rem 0;
     }
+    .burgerIcon {
+      display: none;
+      position: relative;
+      z-index: 10;
+      @media (max-width: 768px) {
+          display: block;
+      }
+      span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $color;
+        transition: all .3s linear;
+        opacity: 1;
+        &:first-child {
+          transform: translateY(-8px) rotate(0deg);
+        }
+        &:last-child {
+          transform: translateY(8px) rotate(0deg);
+        }
+      }
+    }
     a {
       color: #fff;
       text-decoration: none;
@@ -37,13 +72,25 @@
       flex-wrap: wrap;
       flex-direction: row;
       list-style: none;
+      z-index: 10;
       @media (max-width: 768px) {
         flex-basis: 100%;
         max-width: 100%;
-      }
-      @media (max-width: 576px) {
-          flex-direction: column;
-          padding-left: 0;
+        flex-direction: column;
+        padding-left: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 1rem 0 2rem;
+        margin-bottom: 0;
+        transition: all .4s ease-in-out;
+        transform: translateY(-100%);
+        z-index: -1;
+        &.active {
+          transform: translateY(0);
+        }
       }
       li {
         margin-left: 10rem;
@@ -52,9 +99,6 @@
           margin-left: 5rem;
         }
         @media (max-width: 768px) {
-          margin: 0 2rem;
-        }
-        @media (max-width: 576px) {
             margin: 5px 0;
         }
         &:first-child {

@@ -15,7 +15,6 @@ import {
   rainbow,
   rainbowContainer,
 } from "../../animations";
-import ScrollTop from "../../components/ScrollTop";
 
 const Works = () => {
   const [element, controls] = useScroll();
@@ -118,7 +117,6 @@ const Works = () => {
           </a>
         </motion.div>
       </div>
-      <ScrollTop />
     </motion.div>
   );
 };

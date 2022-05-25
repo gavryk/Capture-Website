@@ -15,20 +15,29 @@ function CustomLink({ children, to, ...props }) {
   );
 }
 
-const Nav = () => {
-  
+const Nav = ({ links, activeMobileMenu, toggleMenu }) => {
   return (
     <div className={style.navigate}>
-        <nav>
-            <Link id="logo" className={style.logo} to="/">Gvozd</Link>
-            <ul className={style.navMenu}>
-                <CustomLink to='/'>About Me</CustomLink>
-                <CustomLink to='works'>My Works</CustomLink>
-                <CustomLink to='contact'>Contact Me</CustomLink>
-            </ul>
-        </nav>
+      <nav>
+        <Link id="logo" className={style.logo} to="/">
+          Gvozd
+        </Link>
+        <div className={style.burgerIcon} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul
+          className={`${style.navMenu} ${activeMobileMenu ? style.active : ""}`}
+        >
+          {links &&
+            links.map(({ title, link }, index) => {
+              return <CustomLink to={link} key={`${title}_${index}`}>{title}</CustomLink>;
+            })}
+        </ul>
+      </nav>
     </div>
-  )
-}
+  );
+};
 
 export default Nav

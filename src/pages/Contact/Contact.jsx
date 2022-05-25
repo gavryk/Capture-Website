@@ -5,7 +5,6 @@ import { pageAnimation, titleAnim2 } from "../../animations";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebookF, faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
-import ScrollTop from '../../components/ScrollTop';
 
 const Contact = () => {
    const form = useRef();
@@ -116,7 +115,6 @@ const Contact = () => {
           </motion.form>
         </div>
       </div>
-      <ScrollTop />
     </motion.div>
   );
 }
