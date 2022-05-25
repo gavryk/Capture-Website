@@ -48,6 +48,9 @@
             padding: 1rem;
             border-radius: 5px;
         }
+        img, svg {
+          max-width: 100%;
+        }
       }
       p {
         padding: 1.5rem 0 3rem;

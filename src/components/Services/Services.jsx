@@ -3,10 +3,10 @@ import style from './Services.module.scss';
 import { motion } from "framer-motion";
 import { fade } from "../../animations";
 //icons
-import clock from '../../img/clock.svg';
-import diaphragm from "../../img/diaphragm.svg";
-import money from "../../img/money.svg";
-import teamwork from "../../img/teamwork.svg";
+import reactIcon from "../../img/react-logo.svg";
+import jsIcon from "../../img/js.svg";
+import reduxIcon from "../../img/redux.svg";
+import frontEndIcon from "../../img/front-end-logo.png";
 import home2 from "../../img/serviceImg.jpg";
 //custom hooks
 import {useScroll} from '../../hooks/useScroll';
@@ -15,42 +15,50 @@ const Services = () => {
   const [element, controls] = useScroll();
   
   return (
-    <motion.div variants={fade} animate={controls} className={style.servicesSection} ref={element}>
+    <motion.div
+      variants={fade}
+      animate={controls}
+      className={style.servicesSection}
+      ref={element}
+    >
       <div className={style.image}>
         <img src={home2} alt="service" />
       </div>
       <div className={style.description}>
         <h2>
-          Hight <span>quality</span> services
+          <span>Skills</span>
         </h2>
         <div className={style.cards}>
           <div className={style.card}>
             <div className={style.icon}>
-              <img src={clock} alt="Clock" />
-              <span>Efficient</span>
+              <img src={jsIcon} alt="javascript" />
+              <span>Javascript</span>
+            </div>
+            <p>
+              Good knowledge javascript / jQuery.I use it every day in my
+              projects on curent projects.
+            </p>
+          </div>
+          <div className={style.card}>
+            <div className={style.icon}>
+              <img src={reactIcon} alt="reactjs" />
+              <span>React JS</span>
+            </div>
+            <p>I am developing in this direction, I have some pet projects in my GitHub.</p>
+          </div>
+          <div className={style.card}>
+            <div className={style.icon}>
+              <img src={reduxIcon} alt="Clock" />
+              <span>Redux</span>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <div className={style.card}>
             <div className={style.icon}>
-              <img src={teamwork} alt="Clock" />
-              <span>Teamwork</span>
+              <img src={frontEndIcon} alt="Clock" />
+              <span>Front End Technologies</span>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div className={style.card}>
-            <div className={style.icon}>
-              <img src={diaphragm} alt="Clock" />
-              <span>Diaphragm</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div className={style.card}>
-            <div className={style.icon}>
-              <img src={money} alt="Clock" />
-              <span>Affordable</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>And More Web Technologies.</p>
           </div>
         </div>
       </div>
