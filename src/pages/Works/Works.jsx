@@ -5,6 +5,7 @@ import img2 from "../../img/work2.png";
 import img3 from "../../img/work3.png";
 import img4 from "../../img/work4.png";
 import img5 from "../../img/work5.png";
+import img6 from "../../img/work6.png";
 import { motion } from "framer-motion";
 import { useScroll } from "../../hooks/useScroll"
 import {
@@ -21,6 +22,7 @@ const Works = () => {
   const [element2, controls2] = useScroll();
   const [element3, controls3] = useScroll();
   const [element4, controls4] = useScroll();
+  const [element5, controls5] = useScroll();
   
   return (
     <motion.div
@@ -49,37 +51,20 @@ const Works = () => {
           </a>
         </motion.div>
         <motion.div
-          ref={element}
+          ref={element5}
           variants={fade}
-          animate={controls}
+          animate={controls5}
           initial="hidden"
           className={style.work}
         >
-          <motion.h2 variants={fade}>SoundWave</motion.h2>
+          <motion.h2 variants={fade}>Game Bar</motion.h2>
           <motion.div variants={lineAnim} className={style.line}></motion.div>
           <a
-            href="https://soundwaveio.netlify.app/"
+            href="https://simple-gamebar.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
-            <motion.img variants={photoAnim} src={img1} alt="wokr1" />
-          </a>
-        </motion.div>
-        <motion.div
-          ref={element2}
-          variants={fade}
-          animate={controls2}
-          initial="hidden"
-          className={style.work}
-        >
-          <motion.h2 variants={fade}>Sneakers Store</motion.h2>
-          <motion.div variants={lineAnim} className={style.line}></motion.div>
-          <a
-            href="https://sneak-store.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <motion.img variants={photoAnim} src={img3} alt="wokr3" />
+            <motion.img variants={photoAnim} src={img6} alt="wokr6" />
           </a>
         </motion.div>
         <motion.div
@@ -114,6 +99,40 @@ const Works = () => {
             rel="noreferrer"
           >
             <motion.img variants={photoAnim} src={img5} alt="wokr5" />
+          </a>
+        </motion.div>
+        <motion.div
+          ref={element}
+          variants={fade}
+          animate={controls}
+          initial="hidden"
+          className={style.work}
+        >
+          <motion.h2 variants={fade}>SoundWave</motion.h2>
+          <motion.div variants={lineAnim} className={style.line}></motion.div>
+          <a
+            href="https://soundwaveio.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <motion.img variants={photoAnim} src={img1} alt="wokr1" />
+          </a>
+        </motion.div>
+        <motion.div
+          ref={element2}
+          variants={fade}
+          animate={controls2}
+          initial="hidden"
+          className={style.work}
+        >
+          <motion.h2 variants={fade}>Sneakers Store</motion.h2>
+          <motion.div variants={lineAnim} className={style.line}></motion.div>
+          <a
+            href="https://sneak-store.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <motion.img variants={photoAnim} src={img3} alt="wokr3" />
           </a>
         </motion.div>
       </div>
